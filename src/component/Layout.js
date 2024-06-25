@@ -1,6 +1,6 @@
 import React from 'react';
 import navbar from './Navbar';
-import {  BrowserRouter as Router, Routes, Route, Link, Redirect, BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Redirect, BrowserRouter } from 'react-router-dom';
 import { useNavigate } from "react-router-dom";
 import home from './Home'
 import Next from './Next';
@@ -11,10 +11,11 @@ import './Layout.css'
 export default function Layout(props) {
 
     const navigate = useNavigate();
- const gotoNext = () =>{
-    // alert();
-    navigate("/Next")
- }
+    const gotoNext = () => {
+        // alert();
+        // navigate('/Past',{replace :true});
+        navigate('/Next', { replace: true });
+    };
 
     return (
         <div>
@@ -70,25 +71,10 @@ export default function Layout(props) {
                         </div>
                     </div>
                     <div>
-                    <button type="button" class="btn btn-primary" onClick={gotoNext}>Next</button>
+                        <button type="button" class="btn btn-primary" onClick={gotoNext}>Next</button>
                     </div>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         </div>
     )
 }

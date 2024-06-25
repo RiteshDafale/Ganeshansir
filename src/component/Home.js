@@ -9,11 +9,11 @@ import { BrowserRouter } from 'react-router-dom';
 export default function Home() {
   return (
     <div>
-          <Navbar/>
+           <Navbar/>
          <BrowserRouter>
           <Layout/>
           </BrowserRouter>
-  
+   {/* <Past/> */}
     </div>
   )
 }

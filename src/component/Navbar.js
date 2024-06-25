@@ -9,6 +9,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import Present from './Present';
+import Layout from './Layout';
 // import { CompatRouter,Switch } from 'react-router-dom';
 
 export default function Navbar() {
@@ -25,14 +26,13 @@ export default function Navbar() {
                             <li className="nav-item">
                                 {/* <a className="nav-link active" aria-current="page" href="#">Talk</a> */}
                                 <Router>
-                                    <NavLink to='/home'>talk&nbsp;&nbsp;&nbsp;</NavLink>
+                                    <NavLink to='/home' className="nav-link active" aria-current="page">talk</NavLink>
                                 </Router>
 
                             </li>
                             <li className="nav-item">
-                                {/* <a className="nav-link" href="#">Quatation</a> */}
                                 <Router>
-                                    <NavLink to='/past'>Past</NavLink>
+                                    <NavLink className="nav-link" to='/past'>Past</NavLink>
                                 </Router>
                             </li>
                             <li className="nav-item">
@@ -48,7 +48,7 @@ export default function Navbar() {
 
             <BrowserRouter>
                 <Routes>
-                    <Route path='/home' element={<Present />} />
+                    <Route path='/home' element={<Layout />} />
                     <Route path='/past' element={<Past />} />
                     <Route path='/next' element={<Next />} />
                 </Routes>
